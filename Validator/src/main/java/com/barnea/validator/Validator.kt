@@ -62,8 +62,8 @@ class Validator(private val text: String) {
         return this
     }
 
-    fun containsSubstring(character: String, errorMessage: String? = null): Validator {
-        val validation = errorMessage?.let { ContainsSubstringValidation(character, it) }?: ContainsSubstringValidation(character)
+    fun containsSubstring(substring: String, errorMessage: String? = null): Validator {
+        val validation = errorMessage?.let { ContainsSubstringValidation(substring, it) }?: ContainsSubstringValidation(substring)
         addValidation(validation)
         return this
     }
