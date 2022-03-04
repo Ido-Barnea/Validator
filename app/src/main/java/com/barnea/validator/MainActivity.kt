@@ -10,6 +10,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+        Validator("My text")
+            .notEmpty()
+            .addFailureCallback {
+                Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+            }
+            .addSuccessCallback {
+                Toast.makeText(this, "Succeeded", Toast.LENGTH_SHORT).show()
+            }
+            .validate()
     }
 }
