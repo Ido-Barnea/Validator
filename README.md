@@ -6,7 +6,6 @@ A simple text validation library
   ```gradle
   allprojects {
 		repositories {
-      ...
 			maven { url 'https://jitpack.io' }
 		}
 	}
