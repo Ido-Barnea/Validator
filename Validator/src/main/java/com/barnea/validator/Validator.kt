@@ -50,12 +50,6 @@ class Validator(private val text: String) {
         return this
     }
 
-    fun email(errorMessage: String? = null): Validator {
-        val validation = errorMessage?.let { EmailValidation(it) }?: EmailValidation()
-        addValidation(validation)
-        return this
-    }
-
     fun minLength(length: Int, errorMessage: String? = null): Validator {
         val validation = errorMessage?.let { MinLengthValidation(length, it) }?: MinLengthValidation(length)
         addValidation(validation)
@@ -64,6 +58,48 @@ class Validator(private val text: String) {
 
     fun maxLength(length: Int, errorMessage: String? = null): Validator {
         val validation = errorMessage?.let { MaxLengthValidation(length, it) }?: MaxLengthValidation(length)
+        addValidation(validation)
+        return this
+    }
+
+    fun containsSubstring(character: String, errorMessage: String? = null): Validator {
+        val validation = errorMessage?.let { ContainsSubstringValidation(character, it) }?: ContainsSubstringValidation(character)
+        addValidation(validation)
+        return this
+    }
+
+    fun email(errorMessage: String? = null): Validator {
+        val validation = errorMessage?.let { EmailValidation(it) }?: EmailValidation()
+        addValidation(validation)
+        return this
+    }
+
+    fun phone(errorMessage: String? = null): Validator {
+        val validation = errorMessage?.let { PhoneValidator(it) }?: PhoneValidator()
+        addValidation(validation)
+        return this
+    }
+
+    fun onlyLetters(errorMessage: String? = null): Validator {
+        val validation = errorMessage?.let { OnlyLettersValidation(it) }?: OnlyLettersValidation()
+        addValidation(validation)
+        return this
+    }
+
+    fun onlyNumbers(errorMessage: String? = null): Validator {
+        val validation = errorMessage?.let { OnlyNumbersValidation(it) }?: OnlyNumbersValidation()
+        addValidation(validation)
+        return this
+    }
+
+    fun allLowercase(errorMessage: String? = null): Validator {
+        val validation = errorMessage?.let { AllLowercaseValidation(it) }?: AllLowercaseValidation()
+        addValidation(validation)
+        return this
+    }
+
+    fun allUppercase(errorMessage: String? = null): Validator {
+        val validation = errorMessage?.let { AllUppercaseValidation(it) }?: AllUppercaseValidation()
         addValidation(validation)
         return this
     }
