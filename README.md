@@ -32,10 +32,16 @@ A simple text validation library
   ```
 
 # List of validations:
-- notEmpty
-- minLength
-- maxLength
-- email
+- Not Empty (notEmpty)
+- Min Length (minLength)
+- Max Length (maxLength)
+- Only Letters (onlyLetters)
+- Only Numbers (onlyNumbers)
+- All uppercase (allUppercase)
+- All lowercase (allLowercase)
+- Contains Substring (containsSubstring)
+- Email (email)
+- Phone number (phone)
 
 # License
 ```
