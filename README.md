@@ -22,6 +22,7 @@ A simple text validation library
   ```kotlin
   Validator("My text") // Create a Validator object with your text
             .notEmpty() // Your Validations
+	    .minLength(4)
             .addFailureCallback { errorMessage -> // failure callback (optional)
                 Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
             }
