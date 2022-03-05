@@ -18,7 +18,7 @@ A simple text validation library
   ```
   That's it!
 
-# How to use
+# Quick use
   ```kotlin
   Validator("My text") // Create a Validator object with your text
             .notEmpty() // Your Validations
