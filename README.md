@@ -22,8 +22,8 @@ A simple text validation library
   ```kotlin
   Validator("My text") // Create a Validator object with your text
             .notEmpty() // Your Validations
-            .addFailureCallback { // failure callback (optional)
-                Toast.makeText(this, "Failed", Toast.LENGTH_SHORT).show()
+            .addFailureCallback { errorMessage -> // failure callback (optional)
+                Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
             }
             .addSuccessCallback { // success callback (optional)
                 Toast.makeText(this, "Succeeded", Toast.LENGTH_SHORT).show()
