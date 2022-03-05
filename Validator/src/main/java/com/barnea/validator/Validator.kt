@@ -92,14 +92,26 @@ class Validator(private val text: String) {
         return this
     }
 
-    fun allLowercase(errorMessage: String? = null): Validator {
-        val validation = errorMessage?.let { AllLowercaseValidation(it) }?: AllLowercaseValidation()
+    fun containsLowercase(errorMessage: String? = null): Validator {
+        val validation = errorMessage?.let { ContainsLowercaseValidation(it) }?: ContainsLowercaseValidation()
         addValidation(validation)
         return this
     }
 
-    fun allUppercase(errorMessage: String? = null): Validator {
-        val validation = errorMessage?.let { AllUppercaseValidation(it) }?: AllUppercaseValidation()
+    fun containsUppercase(errorMessage: String? = null): Validator {
+        val validation = errorMessage?.let { ContainsUppercaseValidation(it) }?: ContainsUppercaseValidation()
+        addValidation(validation)
+        return this
+    }
+
+    fun containsDigit(errorMessage: String? = null): Validator {
+        val validation = errorMessage?.let { ContainsDigitValidation(it) }?: ContainsDigitValidation()
+        addValidation(validation)
+        return this
+    }
+
+    fun containsSpecial(errorMessage: String? = null): Validator {
+        val validation = errorMessage?.let { ContainsSpecialCharacterValidation(it) }?: ContainsSpecialCharacterValidation()
         addValidation(validation)
         return this
     }
