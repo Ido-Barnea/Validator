@@ -1,7 +1,7 @@
-# Validator
+# :star: Validator
 A simple text validation library
 
-# How can I add this to my project?
+# :question: How can I add this to my project?
 > Step 1: Add the JitPack repository to your build file
   ```gradle
   allprojects {
@@ -18,7 +18,7 @@ A simple text validation library
   ```
   That's it!
 
-# Quick use
+# :fast_forward: Quick use
   ```kotlin
   Validator("My text") // Create a Validator object with your text
             .notEmpty() // Your Validations
@@ -31,19 +31,21 @@ A simple text validation library
             .validate() // Required, returns a boolean
   ```
 
-# List of validations:
+# :book: List of validations:
 - Not Empty (notEmpty)
 - Min Length (minLength)
 - Max Length (maxLength)
 - Only Letters (onlyLetters)
 - Only Numbers (onlyNumbers)
-- All uppercase (allUppercase)
-- All lowercase (allLowercase)
+- Contains Uppercase (containsUppercase)
+- Contains Lowercase (containsLowercase)
+- Contains Digit (containsDigit)
+- Contains Special Character (containsSpecial)
 - Contains Substring (containsSubstring)
 - Email (email)
 - Phone number (phone)
 
-# License
+# :briefcase: License
 ```
 Copyright 2022 Ido Barnea
 
