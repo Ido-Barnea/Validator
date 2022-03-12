@@ -48,7 +48,7 @@ class Validator(private val text: String) {
      * Sets the failure callback
      * @return Validator object
      */
-    fun addFailureCallback(callback: (errorMessage: String) -> Unit): Validator {
+    fun addOnFailureListener(callback: (errorMessage: String) -> Unit): Validator {
         failureCallback = callback
         return this
     }
@@ -57,7 +57,7 @@ class Validator(private val text: String) {
      * Sets the success callback
      * @return Validator object
      */
-    fun addSuccessCallback(callback: () -> Unit):  Validator {
+    fun addOnSuccessListener(callback: () -> Unit):  Validator {
         successCallback = callback
         return this
     }
