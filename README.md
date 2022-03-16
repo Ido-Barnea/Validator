@@ -33,18 +33,18 @@ A simple text validation library
   ```
 
 # :book: List of validations:
-- Not Empty (notEmpty)
-- Min Length (minLength)
-- Max Length (maxLength)
-- Only Letters (onlyLetters)
-- Only Numbers (onlyNumbers)
-- Contains Uppercase (containsUppercase)
-- Contains Lowercase (containsLowercase)
-- Contains Digit (containsDigit)
-- Contains Special Character (containsSpecial)
-- Contains Substring (containsSubstring)
-- Email (email)
-- Phone number (phone)
+- Not Empty ```notEmpty()```
+- Min Length ```minLength()```
+- Max Length ```maxLength()```
+- Only Letters ```onlyLetters()```
+- Only Numbers ```onlyNumbers()```
+- Contains Uppercase ```containsUppercase()```
+- Contains Lowercase ```containsLowercase()```
+- Contains Digit ```containsDigit()```
+- Contains Special Character ```containsSpecial()```
+- Contains Substring ```containsSubstring()```
+- Email ```email()```
+- Phone number ```phone()```
 
 # :briefcase: License
 ```
