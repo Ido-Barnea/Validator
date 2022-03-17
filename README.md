@@ -1,4 +1,4 @@
-# :star: Validator
+# :mag_right: Validator
 A simple text validation library
 
 # :question: How can I add this to my project?
