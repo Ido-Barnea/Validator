@@ -13,7 +13,7 @@ A simple text validation library
 > Step 2: Add the dependency
   ```gradle
   dependencies {
-	        implementation 'com.github.Ido-Barnea:Validator:1.0.1'
+	        implementation 'com.github.Ido-Barnea:Validator:1.0.3'
 	}
   ```
   That's it!
