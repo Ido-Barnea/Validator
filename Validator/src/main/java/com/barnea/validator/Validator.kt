@@ -7,8 +7,7 @@ class Validator(private val text: String) {
     private val validationsList = ArrayList<BaseValidation>()
     private var errorMessage: String = ""
 
-    private var failureCallback: ((errorMessage: String) -> Unit)? = null
-    private var successCallback: (() -> Unit)? = null
+    private var validatorCallback: ValidatorCallback? = null
 
     /**
      * @return true of all validations in validationsList pass, false otherwise
@@ -17,12 +16,12 @@ class Validator(private val text: String) {
         for (validation in validationsList){
             if (!validation.validate(text)){
                 setError(validation.errorMessage())
-                failureCallback?.invoke(errorMessage)
+                validatorCallback?.onFailure(errorMessage)
                 return false
             }
         }
 
-        successCallback?.invoke()
+        validatorCallback?.onSuccess()
         return true
     }
 
@@ -45,20 +44,11 @@ class Validator(private val text: String) {
     }
 
     /**
-     * Sets the failure callback
+     * Sets the callback
      * @return Validator object
      */
-    fun addOnFailureListener(callback: (errorMessage: String) -> Unit): Validator {
-        failureCallback = callback
-        return this
-    }
-
-    /**
-     * Sets the success callback
-     * @return Validator object
-     */
-    fun addOnSuccessListener(callback: () -> Unit):  Validator {
-        successCallback = callback
+    fun addCallback(callback: ValidatorCallback): Validator {
+        validatorCallback = callback
         return this
     }
 
