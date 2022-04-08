@@ -10,7 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Validator("My text") // Create a Validator object with your text
+        Validator("My Text") // Create a Validator object with your text
             .notEmpty() // Your Validations
             .minLength(4, "Your text should be at least 4 characters long!")
             .addCallback(object: ValidatorCallback {
