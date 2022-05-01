@@ -29,7 +29,7 @@ A simple text validation library
 		}
 
 		override fun onFailure(error: String) {
-			//Text did not pass validation tests
+			// Text did not pass validation tests
 		}
 	})
 	.validate() // Required, returns a boolean
